@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cotizador</title>
+  </head>
+  <body>
+    <div class="spinner">
+      <div class="coin-spin"></div>
+    </div>
+    <div id="container" class="spinner-hidden">
+      <img
+        src="css/img/cripto monedas para proyecto cotizador.png"
+        alt=""
+      />
+      <div id="coin-container">
+        <form id="coin-form">
+          <div class="coin-input-container">
+            <label for="coin">ELIGE TU MONEDA</label>
+            <select class="coin-input" id="coin">
+              <option selected disabled value="">
+                Selecciona una moneda
+              </option>
+              <option value="USD">Dolar</option>
+              <option value="EUR">Euros</option>
+              <option value="ARS">Pesos argentinos</option>
+              <option value="VES">Bolivares</option>
+            </select>
+          </div>
+
+          <div class="coin-input-container">
+            <label for="crypto">ELIGE TU CRYPTO</label>
+            <select class="coin-input" id="crypto">
+              <option selected disabled value="">
+                Selecciona una cryptomoneda
+              </option>
+              <option value="BTC">Bitcoin</option>
+              <option value="ETH">Ethereum</option>
+              <option value="AXS">AXS</option>
+              <option value="BNB">Binance coin</option>
+            </select>
+          </div>
+
+          <div class="coin-input-container">
+            <label for="amount">ELIGE TU MONEDA</label>
+            <input
+              type="text"
+              class="coin-input"
+              id="amount"
+              placeholder="monto"
+            />
+          </div>
+
+          <button id="form-btn" type="submit">COTIZAR</button>
+        </form>
+
+        <div id="coin-info"></div>
+      </div>
+    </div>
+<script src="js/script.js"></script>
+  </body>
+</html>
+
+
+
+
