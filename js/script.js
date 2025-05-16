@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
 });
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // detiene el comportamiento predeterminado del navegador al enviar el formulario
+  e.preventDefault();
   const coinSelected = [...coin.children].find(
     (option) => option.selected
   ).value;
@@ -23,10 +23,10 @@ form.addEventListener('submit', async (e) => {
   ).value;
   const amountValue = amount.value;
 
-  // Mostrar el spinner antes de la petición
+
   spinner.classList.remove('spinner-hidden');
   container.classList.add('spinner-hidden');
-  coinInfo.innerHTML = ''; // Limpiar el contenido anterior
+  coinInfo.innerHTML = ''; 
 
   try {
     const response = await (
@@ -63,7 +63,6 @@ form.addEventListener('submit', async (e) => {
     console.log(error);
     coinInfo.innerHTML = `<p class="error">Hubo un error al obtener la información de la moneda.</p>`;
   } finally {
-    // Ocultar el spinner después de la petición, ya sea exitosa o fallida
     spinner.classList.add('spinner-hidden');
     container.classList.remove('spinner-hidden');
   }
